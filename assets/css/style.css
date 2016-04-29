@@ -8,11 +8,10 @@ body {
 
 h2 {
   margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 #wrapper {
-  width: 1000px;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -20,7 +19,7 @@ h2 {
 }
 
 #title {
-  width: 1000px;
+  width: 1200px;
   height: 300px;
   overflow: hidden;
 }
@@ -80,7 +79,7 @@ h2 {
 }
 
 #sidebar {
-  width: 225px;
+  width: 275px;
   float: left;
   border-right: 1px solid #eee;
   padding: 0px 15px 0px 0px;
@@ -93,15 +92,34 @@ h2 {
 }
 
 #sidebar ul .inner-list {
-  margin-left: 10px;
+  margin-left: 15px;
+}
+
+#sidebar a {
+  text-decoration: none;
+}
+
+#sidebar .stage-element {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#sidebar .stage-element a {
+  font-size: 17px;
+}
+
+#sidebar .active {
+  font-weight: bold;
 }
 
 #content {
-  width: 700px;
+  width: 800px;
   float: left;
   padding: 0px 0px 0px 20px;
 }
 
 #content img {
-  max-width: 500px;
+  max-width: 350px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

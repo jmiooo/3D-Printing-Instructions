@@ -1,10 +1,53 @@
-<head>
+<div style="display:none;">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script type="text/javascript">
     // TODO: Hacky way to highlight the item the user is on
     // Is there a better way?
-    var address = document.location.href;
-    var page = address.split("/")[3];
+    var curr_stage_element = null;
+    var curr_step_element = null;
+
+    function bold(e) {
+      if (curr_stage_element !== null) {
+        curr_stage_element.removeClass("active");
+      }
+      if (curr_step_element !== null) {
+        curr_step_element.removeClass("active");
+      }
+
+      var address = document.location.href;
+      var address_groups = address.split("/");
+      if (address_groups.length == 4) {
+        var url = address_groups[3];
+        var url_groups = url.split("#");
+
+        var stage_full;
+        var stage = null;
+        var step = null;
+
+        if (url_groups.length == 2) {
+          stage_full = url_groups[0];
+          stage = stage_full.substring(0, stage_full.length - 5);
+          step = url_groups[1];
+        }
+        else {
+          stage_full = url;
+          stage = stage_full.substring(0, stage_full.length - 5);
+        }
+
+        curr_stage_element = $("#" + stage + "-sidebar");
+        curr_stage_element.addClass("active");
+        if (step !== null) {
+          curr_step_element = $("#" + step + "-sidebar");
+          curr_step_element.addClass("active");
+        }
+      }
+
+      return true;
+    }
+
+    window.onhashchange = bold;
+
+    bold();
   </script>
-</head>
+</div>

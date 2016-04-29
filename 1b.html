@@ -1,0 +1,79 @@
+---
+---
+
+<html>
+  <head></head>
+  <body>
+    <div id="wrapper">
+      {% include header.html %}
+      <div id="content-wrapper">
+        {% include sidebar.html %}
+        <div id="content">
+          <h2 id="1b">Sketching the 3D Model</h2>
+
+          <h3 id="1b-1">Starting the Sketch</h3>
+
+          <ol>
+            <li>
+              <p>Today you will be making a cube with a sphere inside of it. To begin, select the "Sketch" tab in the top left corner. Click "Start Sketch" and choose the top plane as your sketch plane.</p>
+              <img src="assets/images/1b-1-1.jpg">
+            </li>
+          </ol>
+
+          <h3 id="1b-2">Sketching the Cube</h3>
+
+          <ol>
+            <li>
+              <p>To start constructing the cube, first create a rectangle on the top plane.</p>
+              <img src="assets/images/1b-2-1.jpg">
+            </li>
+
+            <li>
+              <p>Next, you need to extrude your box into a cube. Extrude is a feature that turns a 2D object into a 3D object by stretching it out in one direction. You can use the "Extrude" tool on the features tool bar to use this feature. Set your extrude depth to 1 inch.</p>
+              <img src="assets/images/1b-2-2.jpg">
+            </li>
+
+            <li>
+              <p>Next, you need to create another sketch on one face of the cube to create the windows that allow you to see the sphere. Make a circle centered on the plane of diameter .7 inches, as shown below.</p>
+              <img src="assets/images/1b-2-3.jpg">
+              <img src="assets/images/1b-2-4.jpg">
+            </li>
+
+            <li>
+              <p>Use the "Cut Extrude" tool to cut this window. Select through all for the extrude cut, and repeat until you have a window on each face.</p>
+              <img src="assets/images/1b-2-5.jpg">
+            </li>
+          </ol>
+
+          <h3 id="1b-3">Sketching the Sphere</h3>
+
+          <ol>
+            <li>
+              <p>With the cube finished, it is now time to make the sphere and place it inside. Start by sketching a semicircle on one of the faces. Do a rotation extrude around the center axis of the semicircle to create your sphere.</p>
+              <img src="assets/images/1b-3-1.jpg">
+            </li>
+
+            <li>
+              <p>With the extrude complete, you should have a sphere flush with one of the windows located inside the cube. </p>
+              <img src="assets/images/1b-3-2.jpg">
+            </li>
+          </ol>
+
+          <h3 id="1b-4">Saving the Sketch</h3>
+
+          <ol>
+            <li>
+              <p>Now that you have created the geometry that the printer can model, you need to save the file in a filetype which the CubePro can interpret and build. Select from "File" the option "Save As." Then, save the file as a .stl file. You will then import this file into the CubePro software so that it can be oriented properly for the machine to print. </p>
+              <img src="assets/images/1b-4-1.jpg">
+            </li>
+          </ol>
+
+          <h3 id="1b-finished">Once You've Finished...</h3>
+
+          <p>Click <a href="2.html#2">here</a> for the next step.</p>
+        </div>
+      </div>
+    </div>
+    {% include import.html %}
+  </body>
+</html>
