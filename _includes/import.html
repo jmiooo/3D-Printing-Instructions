@@ -17,8 +17,15 @@
 
       var address = document.location.href;
       var address_groups = address.split("/");
-      if (address_groups.length == 4) {
-        var url = address_groups[3];
+
+      var should_continue = false;
+      if ((address_groups[address_groups.length - 1] !== "index.html") &&
+          (address_groups[address_groups.length - 1].indexOf("html") !== -1)) {
+        should_continue = true;
+      }
+
+      if (should_continue) {
+        var url = address_groups[address_groups.length - 1];
         var url_groups = url.split("#");
 
         var stage_full;
